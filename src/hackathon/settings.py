@@ -80,9 +80,16 @@ WSGI_APPLICATION = 'hackathon.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
+import os
+import dj_database_url
+
+# ... 중략 ...
+
+# os.getenv는 변수명인 'DATABASE_URL'을 인자로 받아야 합니다.
+# 뒤의 주소는 로컬 테스트용 기본값(fallback)으로 작동합니다.
 DATABASES = {
     'default': dj_database_url.config(
-        default=os.getenv('postgresql://postgres:HwjmhgiTVKLMVMxRtrTwJLajKftzzjjK@postgres.railway.internal:5432/railway'),
+        default='postgresql://postgres:HwjmhgiTVKLMVMxRtrTwJLajKftzzjjK@postgres.railway.internal:5432/railway',
         conn_max_age=600
     )
 }
