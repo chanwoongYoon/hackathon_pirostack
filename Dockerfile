@@ -17,7 +17,7 @@ RUN apt-get update && \
     && rm -rf /var/lib/apt/lists/*
 
 # 의존성 설치를 위해 requirements.txt 복사
-COPY src/requirements.txt .
+COPY requirements.txt .
 
 # 의존성 설치 (psycopg2 포함)
 RUN pip install --upgrade pip && \
