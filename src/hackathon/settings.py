@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-6njm_+ik9^)d1=sxw53s9_ioes(tc%j^fd#15i2zh8l&y8nl=!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['hackathonpirostack-production.up.railway.app', 'localhost', '127.0.0.1']
 
 
 # Application definition
