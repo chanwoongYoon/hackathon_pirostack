@@ -137,3 +137,7 @@ TAILWIND_APP_NAME = 'theme'
 # image
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 MEDIA_URL = '/media/'
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://hackathonpirostack-production.up.railway.app'
+]
