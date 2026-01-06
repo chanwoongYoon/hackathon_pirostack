@@ -31,4 +31,5 @@ COPY src/ .
 EXPOSE 8000
 
 # 실행 명령
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+# Dockerfile의 마지막 줄에 넣으세요.
+CMD ["sh", "-c", "python manage.py migrate && gunicorn --pythonpath src hackathon.wsgi --bind 0.0.0.0:$PORT"]
