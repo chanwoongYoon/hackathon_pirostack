@@ -31,4 +31,5 @@ COPY src/ .
 EXPOSE 8000
 
 # 실행 명령
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+vz# 최종 실행 명령 (Dockerfile 마지막 줄)
+CMD ["sh", "-c", "python manage.py migrate && gunicorn --pythonpath src hackathon.wsgi --bind 0.0.0.0:8000"]
